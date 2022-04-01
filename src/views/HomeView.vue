@@ -285,7 +285,9 @@
             </figcaption>
         </figure>
     </div>
+    <script type="application/javascript" defer src="../js/app.js"></script>
 	</div>
+    
 </template>
 
 <script>
@@ -296,7 +298,7 @@
 		export default {
 			// [VUE] Component name
 			name: 'HomeView',
-
+        
 			/*
 				[VUE] Components => https://bit.ly/3GdqmXg
 				Used to inject children components
@@ -338,7 +340,7 @@
 				*/
 					mounted: async function(){},
 				//
-
+                    
 				/* 
 					// Called synchronously after the instance has been initialized
 					created: async function(){},
