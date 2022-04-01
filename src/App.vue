@@ -13,6 +13,7 @@
 		<FooterMain 
 			:item="cmpFooterContent"
 		/>
+		
 	</div>
 </template>
 
@@ -48,7 +49,7 @@
 					return {
 						cmpMainTheme: 'small-theme',
 						cmpHeaderContent: {
-							title: 'Azertyuiop',
+							title: 'Films, séries TV et bien plus en illimité',
 							subtitle: 'Lorem ipsum <b>dolor ismet</b>',
 							image: '@/assets/noun-popcorn-4269572.png'
 						},
@@ -142,6 +143,6 @@
 		}
 	//
 </script>
-<style scoped>
+<style>
 @import './css/style.css';
 </style>

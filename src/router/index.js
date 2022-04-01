@@ -21,6 +21,11 @@ const routerPath = [
         name: 'FilmView',
         component: () => import('../views/FilmView.vue'),
     },
+    {
+        path: '/register',
+        name: 'RegisterView',
+        component: () => import('../views/RegisterView.vue'),
+    },
 ];
 //
 

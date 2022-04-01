@@ -1,9 +1,36 @@
 <template>
-	<footer 
-		class="footer-main-component"
+	<div 
+		class="register-view-component"
 	>
-		<p>&copy; - StreamFree - 2022</p>
-	</footer>
+		<main>
+    <section class="image-selec">
+        <ul>
+            <li><img src="../assets/affescobar.jpg" alt="escobar"></li>
+            <li><img src="../assets/affgravity.jpg" alt="gravity"></li>
+            <li><img src="../assets/affjoker.jpg" alt="joker"></li>
+            <li><img src="../assets/affjsul.jpg" alt="jesuisunelegende"></li>
+            <li><img src="../assets/affmeilleurfilmtoutlestemps.jpg" alt="leseigneurdesanneaux"></li>
+        </ul>
+    </section>
+    <section class="form">
+        <h2>Remplissez le formulaire</h2>
+        <form action="#">
+            <label for="Pseudo">Pseudo</label>
+            <input type="text" id="Pseudo" placeholder="Pseudo" aria-required="true" name="Pseudo" autofocus>
+            <label for="email">Mail</label>
+            <input type="email" id="email" placeholder="Mail" aria-required="true" name="mail">
+            <label for="mdp">Mot de passe</label>
+            <input type="password" id="mdp" placeholder="Mot de passe" aria-required="true" name="mdp">
+            <label for="Ville">Ville</label>
+            <input type="text" id="Ville" placeholder="Ville" aria-required="true" name="ville">
+
+
+            <input type="submit" value="Valider">
+        </form>
+        <a class="bouton-form" href="./">Retour à la boutique</a>
+    </section>
+	</main>
+	</div>
 </template>
 
 <script>
@@ -13,32 +40,13 @@
 	*/
 		export default {
 			// [VUE] Component name
-			name: 'FooterMain',
+			name: 'RegisterView',
 
 			/*
 				[VUE] Components => https://bit.ly/3GdqmXg
 				Used to inject children components
 			*/
-				components: {
-				},
-
-				props:{
-					item:{
-						type: String,
-						required: true,
-						default: () => {}
-					}
-				},
-
-
-				computed: {
-					cmpFooterText: function(){
-						if(this.item && this.item.text){
-							return this.item.text;
-						}
-						else{ return undefined;}
-					}
-				},
+				components: {},
 			//
 
 			/*
