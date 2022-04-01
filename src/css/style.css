@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+/*Reset*/
+html{
+    scroll-behavior: smooth;
+}
+body,h1,h2,h3,p,ul,figure{
+    margin: 0;
+    font-size: 62.5%;
+    padding: 0;
+    font: 1.6rem 'Oswald', sans-serif;
+    font-weight: 200;
+    list-style: none;
+}
+body{
+    margin: 0;
+    line-height: 1.6rem;
+    text-rendering:optimizeLegibility;
+    background-color: var(--color-secondary);
+}
+*{
+    box-sizing: border-box;
+}
+img{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    object-fit: cover;
+}
+a{
+    text-decoration: none;
+    color: #222;
+}
+
+ input[type="submit"]{
+    padding: 0;
+    background-color: transparent;
+    font-size: inherit;
+    border: 0;
+}
+input{
+    border: 0;
+}
+button{
+    border: 0;
+    background: none;
+}
+/*charte graphique couleur*/
+:root{
+    --color-initial:#fff;
+    --color-primary:#202124;
+    --color-secondary:#24292f;
+    --color-textclassic: #bbbbbb;
+    --color-primary-boosted: #0c0c0c;
+}
+header{
+    text-align: center;
+    max-width: 100%;
+    background-color: var(--color-primary);
+    padding: 0;
+    margin: 0;
+    color: var(--color-textclassic);
+    margin-bottom: 2rem;
+}
+header>h1>img{
+    max-width: 5rem;
+    display: inline-block;
+    margin-right: 2rem;
+}
+header>h1{
+    font-size: 4rem;
+    display: inline-block;
+    color: var(--color-initial);
+}
+main{
+    width: 0 auto;
+    color: var(--color-textclassic);
+}
+main>section>h2{
+    text-align: center;
+    max-width: 100%;
+    font-size: 2rem;
+    margin-bottom: 1.6rem;
+    margin-top: 1.6rem;
+}
+
+.image-selec{
+    margin-bottom: 5rem;
+}
+
+.image-selec ul li figure{
+    position: relative;
+
+}
+.image-selec ul li figure .material-icons{
+    vertical-align: -.4rem;
+}
+.image-selec ul li figure figcaption{
+    display: grid;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(0,0,0,0.6);
+    align-items: center;
+    transform: scale(0);
+    transition: all 500ms ease-in-out;
+    transform-origin: center center;
+    cursor: pointer;
+    color: var(--color-initial);
+    text-align: center;
+}
+.image-selec ul li figure:hover figcaption{
+    transform: scale(1);
+}
+.image-selec ul{
+    display: grid;
+    max-width: 80rem;
+    margin: 0 auto;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    
+}
+.image-selec ul li figure img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+.bouton{
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: .1rem;
+    line-height: 4.5rem;
+    color: var(--color-initial);
+    border: solid var(--color-initial) .1rem;
+    background-color: var(--color-primary);
+    display: block;
+    margin: 0 auto;
+    width: 20rem;
+}
+footer{
+    text-align: center;
+    max-width: 100%;
+    background-color: var(--color-primary);
+    color: var(--color-textclassic);
+    margin: 5rem 0 0;
+    padding: 1rem;
+}
+/*Formulaire*/
+.form h2{
+    font-family: sans-serif;
+    text-align: center;
+    max-width: 70%;
+    margin: 0 auto;
+    border-bottom: solid 0.1rem var(--color-primary);
+    color:var(--color-initial);
+    padding: 1rem;
+    line-height: 2rem;
+}
+
+.form form{
+    max-width: 50rem;
+    margin: 0rem auto;
+}
+.form form label{
+    
+    line-height: 3rem;
+    color: var(--color-textclassic);
+    margin: 0.5rem auto;
+
+}
+.form form input, .form form label{
+    display: block;
+}
+
+.form form input{
+    background-color: var(--color-primary-boosted);
+    color: var(--color-textclassic);
+    padding: 1rem;
+    width: 100%;
+    font-size: 1rem;
+    opacity: 70%;
+}
+
+.form form input:last-child{
+    margin: 5rem auto;
+    color: var(--color-initial);
+    background-color: var(--color-primary-boosted);
+    cursor: pointer;
+    width: 50%;
+    font-size: 1.6rem;
+}
+.bouton-form{
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: .1rem;
+    line-height: 3rem;
+    color: var(--color-initial);
+    
+    display: block;
+    margin: 0 auto;
+    width: 15rem;
+    font-size: inherit;
+}
+@media screen and (max-width: 450px){
+    header>h1{
+        font-size: 1.4rem;
+    }
+    main>section>p{
+        font-size: 1rem;
+        max-width: 80%;
+    }
+    .bouton{
+        width: 10rem;
+        font-size: 1rem;
+    }
+    footer{
+        font-size: 1.2rem;
+    }
+    .form h2{
+        font-size: 1.2rem;
+    }
+    .form form label{
+        font-size: 1.2rem;
+    }
+    .form form input{
+        padding: .8rem;
+    }
+    .image-selec ul{
+        
+        grid-template-columns: repeat(3, 5fr);
+        
+    }
+    
+}
+/*Modal*/
+.parent-modale{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    opacity: 0;
+    z-index: -1;
+    transition: all 0.4s ease-in-out;
+}
+.parent-modale .modale{
+    font-size: 0;
+    max-width: 80rem;
+    padding: 1rem 0 1rem 1rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    box-shadow: 0 0 1rem rgba(0,0,0,0.6);
+    z-index: 2;
+    cursor: pointer;
+    
+    
+}
+.parent-modale .modale img{
+    margin-right: 1rem;
+}
+.parent-modale .modale img, .parent-modale .modale figcaption{
+    display: inline-block;
+    width: calc(100% / 2  - 1rem);
+    vertical-align: top;
+    font-size: inherit;
+    
+}
+.parent-modale .modale .desc{
+    position: static;
+    transition: none;
+    background-color: #fff;
+    color: #222;
+    font-size: 1.2rem;
+}
+.modale-active{
+    z-index: 1;
+    opacity: 1;
+    transform-origin: center center;
+}
+.parent-modale .modale .desc h3{
+    font-size: 2rem;
+    font-weight: 400;
+    background-color: #222;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.parent-modale .modale .desc .synopsis{
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+}
+.parent-modale .modale .desc .date{
+    font-size: 1.6rem;
+}
+.parent-modale .modale .desc .genre{
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    font-size: 1.6rem;
+}
+.parent-modale .modale .desc .duree{
+    font-size: 1.6rem;
+}
+.parent-modale .modale .desc p :is(time){
+    padding: 1rem;
+}
+.parent-modale .modale button{
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    z-index: 2;
+    color: #fff;
+    cursor: pointer;
+}
+@media screen and (max-width: 1450px){
+    .parent-modale .modale {
+        max-width: 50rem;
+    }
+    
+    .parent-modale .modale .desc .synopsis{
+        overflow: hidden;
+        overflow-block: scroll ;
+        max-height: 10rem;
+    }
+}
+@media screen and (max-width: 900px){
+    header h1 img{
+        display: none;
+    }
+    .parent-modale .modale img, .parent-modale .modale figcaption{
+        display: block;
+        width: 100% ;
+    }    
+    .parent-modale .modale{
+        padding: .5rem .5rem .5rem .5rem; 
+        max-width: 30rem;
+    }
+    .parent-modale .modale button{
+        position:fixed sticky;
+    }
+    .parent-modale .modale .desc h3{
+        font-size: 1.6rem;
+    }
+    .parent-modale .modale .desc .synopsis,.parent-modale .modale .desc .date, .parent-modale .modale .desc .genre, .parent-modale .modale .desc .duree{
+        font-size: 1.2rem;
+    }
+}
+@media screen and (max-height: 600px){
+    .parent-modale .modale{
+        overflow: hidden;
+        overflow-block: scroll;
+
+        max-height: 20rem;
+    }
+    .parent-modale .modale img, .parent-modale .modale figcaption{
+        display: inline-block;
+        width: calc(100% / 2  - 1rem);
+    }
+}
